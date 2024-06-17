@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 3c0f928fb6749c74db64165578e6ba0e
+  - enabled: 1
     path: Assets/Scenes/InsideShipScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/OutsideShipScene.unity
+    guid: ea9ef0d92a6cf104299aa5364716b774
+  - enabled: 1
+    path: Assets/Scenes/CaveUnderground.unity
+    guid: 0485bee6a8350de44b115af17fc4d557
   m_configObjects: {}
