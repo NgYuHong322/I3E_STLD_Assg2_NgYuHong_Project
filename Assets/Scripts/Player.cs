@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.SocialPlatforms.Impl;
 /*
  * Author: NgYuHong
  * Date: 17/6/24
@@ -11,8 +12,53 @@ using Unity.VisualScripting;
 
 public class Player : MonoBehaviour
 {
+    Collectible currentCollectible;
+    // see where ray come
+    [SerializeField]
+    Transform playerCamera;
+
+    // see how far ray shoot
+    [SerializeField]
+    float interactionDistance;
+
+    [SerializeField]
+    TextMeshProUGUI collectText;
     private void Update()
     {
+        Debug.DrawLine(playerCamera.position, playerCamera.position + (playerCamera.forward * interactionDistance), Color.red);
+        RaycastHit hitInfo;
+        if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hitInfo, interactionDistance))
+        {
+            Debug.Log(hitInfo);
+            if (hitInfo.transform.TryGetComponent<Collectible>(out currentCollectible))
+            {
+                collectText.gameObject.SetActive(true);
+            }
+            else
+            {
+                currentCollectible = null;
+                collectText.gameObject.SetActive(false);
+            }
+
+        }
+        else
+        {
+            currentCollectible = null;
+            collectText.gameObject.SetActive(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            OnInteract();
+            
+        }
     }
 
+    void OnInteract()
+    {
+        if (currentCollectible != null)
+        {
+            currentCollectible.Collected(this);
+        }
+    }
 }

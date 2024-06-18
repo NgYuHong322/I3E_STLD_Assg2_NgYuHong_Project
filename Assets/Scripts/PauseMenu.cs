@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // hide menu
         pauseMenu.SetActive(false);
         
     }
@@ -18,6 +19,7 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // when press escape key
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
@@ -34,21 +36,35 @@ public class PauseMenu : MonoBehaviour
 
     public void PauseGame()
     {
+        // show menu
         pauseMenu.SetActive(true);
+        // Pause time
         Time.timeScale = 0f;
         isPaused = true;
     }
 
     public void ResumeGame()
     {
+        // hide menu
         pauseMenu.SetActive(false);
+        // Resume time
         Time.timeScale = 1f;
         isPaused = false;
     }
 
+    public void RestartGame()
+    {
+        // Resume time
+        Time.timeScale = 1f;
+        // Load different scene
+        SceneManager.LoadScene("OutsideShipScene");
+    }
+
     public void GoToMainMenu()
     {
+        // Resume time
         Time.timeScale = 1f;
+        // Load different scene
         SceneManager.LoadScene("Menu");
     }
     public void QuitGame()

@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CaveUnderground.unity
     guid: 0485bee6a8350de44b115af17fc4d557
+  - enabled: 1
+    path: Assets/Scenes/OutsideShipScene 2.unity
+    guid: 34dccb09866e27943b02743fd23e6140
   m_configObjects: {}
