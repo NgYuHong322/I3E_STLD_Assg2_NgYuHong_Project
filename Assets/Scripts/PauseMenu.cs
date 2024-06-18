@@ -2,7 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static UnityEngine.ProBuilder.AutoUnwrapSettings;
 
+/*
+ *Author: Ng Yu Hong
+ * Date: 18 / 6 / 24
+ * Decription: Pause Menu
+ */
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;

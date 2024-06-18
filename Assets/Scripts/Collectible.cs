@@ -1,7 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
+ *Author: Ng Yu Hong
+ * Date: 18 / 6 / 24
+ * Decription: Collectible
+ */
 public class Collectible : MonoBehaviour
 {
     [SerializeField]

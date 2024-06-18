@@ -468,6 +468,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 672999895}
+  - {fileID: 688751398}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &18590791
@@ -485,6 +486,7 @@ MonoBehaviour:
   scoreText: {fileID: 1952788213}
   textBox: {fileID: 1410622948}
   currentScore: 0
+  crystalScore: 0
 --- !u!1001 &29215101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9065,12 +9067,12 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 18590790}
     m_Modifications:
     - target: {fileID: 2436167201053870133, guid: f6b9455b18841b04eb151574e65913cf,
         type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: pausemeu
       objectReference: {fileID: 0}
     - target: {fileID: 6146038362547763760, guid: f6b9455b18841b04eb151574e65913cf,
         type: 3}
@@ -9177,6 +9179,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6b9455b18841b04eb151574e65913cf, type: 3}
+--- !u!224 &688751398 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6146038362547763760, guid: f6b9455b18841b04eb151574e65913cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 688751397}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &689517352 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 476d7e24f53ccf641805646d05f61bde,
@@ -19070,7 +19078,7 @@ MonoBehaviour:
   m_text: 'Parts: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -28704,7 +28712,6 @@ SceneRoots:
   - {fileID: 585802598}
   - {fileID: 525178309}
   - {fileID: 586467747}
-  - {fileID: 688751397}
   - {fileID: 2051862605}
   - {fileID: 916552107}
   - {fileID: 18590790}

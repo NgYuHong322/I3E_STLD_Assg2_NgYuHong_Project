@@ -2,7 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+/*
+ *Author: Ng Yu Hong
+ * Date: 18 / 6 / 24
+ * Decription: Scene Changer
+ */
 public class SceneChanger : MonoBehaviour
 {
     public int targetScene;
