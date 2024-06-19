@@ -14,5 +14,4 @@ public class Parts : Collectible
     {
         return score;
     }
-
 }
