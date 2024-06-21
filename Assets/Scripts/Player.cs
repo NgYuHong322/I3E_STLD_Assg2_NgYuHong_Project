@@ -12,6 +12,7 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class Player : MonoBehaviour
 {
+    public TextMeshProUGUI healthNum;
     Collectible currentCollectible;
     // see where ray come
     [SerializeField]
@@ -24,7 +25,6 @@ public class Player : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI collectText;
 
-    public int health = 4;
     private void Update()
     {
         Debug.DrawLine(playerCamera.position, playerCamera.position + (playerCamera.forward * interactionDistance), Color.red);
@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             OnInteract();
-            
+
         }
     }
 
@@ -62,10 +62,5 @@ public class Player : MonoBehaviour
         {
             currentCollectible.Collected(this);
         }
-    }
-    public void DecreaseScore(int scoreToRemove) //function to remove score
-    {
-        health -= scoreToRemove;
-
     }
 }

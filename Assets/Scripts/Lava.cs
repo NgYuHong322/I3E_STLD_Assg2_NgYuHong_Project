@@ -8,7 +8,6 @@ using UnityEngine;
  */
 public class Lava : MonoBehaviour
 {
-
     public int DmgInt = 2;
     public int lavaDmg = 1;
 
@@ -17,7 +16,7 @@ public class Lava : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<Player>().DecreaseScore(lavaDmg);
+            GameManager.Instance.DecreaseHealth(lavaDmg);
             timer = 0f;
         }
     }
@@ -30,7 +29,7 @@ public class Lava : MonoBehaviour
 
             if (timer >= DmgInt)
             {
-                other.gameObject.GetComponent<Player>().DecreaseScore(lavaDmg);
+                GameManager.Instance.DecreaseHealth(lavaDmg);
                 timer = 0f;
             }
         }

@@ -12,8 +12,9 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public TextMeshProUGUI scoreText;
     public GameObject textBox;
+    public TextMeshProUGUI healthNum;
     private int currentScore = 0;
-
+    private int health = 4;
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -33,4 +34,20 @@ public class GameManager : MonoBehaviour
         textBox.SetActive(true);
     }
 
+    public void DecreaseScore(int scoreToRemove)
+    {
+        health -= scoreToRemove;
+        healthNum.text = health.ToString();
+    }
+
+    public void DecreaseHealth(int damage)
+    {
+        health -= damage;
+        healthNum.text = health.ToString();
+    }
+
+    public int GetHealth()
+    {
+        return health;
+    }
 }
