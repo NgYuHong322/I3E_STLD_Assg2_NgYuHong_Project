@@ -12,7 +12,7 @@ public class robots : MonoBehaviour
     public NavMeshAgent enemy;
     public Transform Player;
 
-    int damage = 2;
+    int damage = 1;
     public void KillPlayer()
     {
         Destroy(gameObject);
