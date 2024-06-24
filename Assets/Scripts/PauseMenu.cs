@@ -19,7 +19,8 @@ public class PauseMenu : MonoBehaviour
     {
         // hide menu
         pauseMenu.SetActive(false);
-        
+        isPaused = false;
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame
@@ -60,6 +61,8 @@ public class PauseMenu : MonoBehaviour
 
     public void RestartGame()
     {
+        // Reset static variables
+        isPaused = false;
         // Resume time
         Time.timeScale = 1f;
         // Load different scene
@@ -68,6 +71,8 @@ public class PauseMenu : MonoBehaviour
 
     public void GoToMainMenu()
     {
+        // Reset static variables
+        isPaused = false;
         // Resume time
         Time.timeScale = 1f;
         // Load different scene
