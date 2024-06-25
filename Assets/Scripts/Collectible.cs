@@ -16,7 +16,7 @@ public class Collectible : MonoBehaviour
         return 0; // Default score, should be overridden by child classes
     }
 
-    public void Collected(Player player)
+    public virtual void Collected(Player player)
     {
         AudioSource.PlayClipAtPoint(collectAudio, transform.position, 1f);
         Destroy(gameObject); // Destroy gameobject when collected

@@ -13,8 +13,10 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public GameObject textBox;
     public TextMeshProUGUI healthNum;
+    public TextMeshProUGUI MedKitNum;
     private int currentScore = 0;
     private int health = 10;
+    public int medKit = 0;
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -43,6 +45,23 @@ public class GameManager : MonoBehaviour
     public void DecreaseHealth(int damage)
     {
         health -= damage;
+        healthNum.text = health.ToString();
+    }
+
+    public void DecreaseMedKit(int usedItem)
+    {
+        medKit -= usedItem;
+        MedKitNum.text = medKit.ToString();
+    }
+    public void IncreaseMedKit(int usedItem)
+    {
+        medKit += usedItem;
+        MedKitNum.text = medKit.ToString();
+    }
+
+    public void IncreaseHealth(int Health)
+    {
+        health += Health;
         healthNum.text = health.ToString();
     }
 
