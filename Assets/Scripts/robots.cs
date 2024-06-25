@@ -22,8 +22,8 @@ public class robots : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameManager.Instance.DecreaseHealth(damage); // Decrease health of the player
             KillPlayer(); // Destroy this robot
+            GameManager.Instance.DecreaseHealth(damage); // Decrease health of the player
         }
     }
 

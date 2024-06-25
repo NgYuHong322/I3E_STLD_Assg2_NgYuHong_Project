@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject textBox;
     public TextMeshProUGUI healthNum;
     private int currentScore = 0;
-    private int health = 4;
+    private int health = 10;
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
