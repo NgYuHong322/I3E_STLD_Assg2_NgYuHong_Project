@@ -66,7 +66,7 @@ public class PauseMenu : MonoBehaviour
         // Resume time
         Time.timeScale = 1f;
         // Load different scene
-        SceneManager.LoadScene("OutsideShipScene");
+        SceneManager.LoadScene("Start");
     }
 
     public void GoToMainMenu()
@@ -76,7 +76,7 @@ public class PauseMenu : MonoBehaviour
         // Resume time
         Time.timeScale = 1f;
         // Load different scene
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Menu 1");
     }
     public void QuitGame()
     {

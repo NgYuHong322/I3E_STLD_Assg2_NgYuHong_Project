@@ -61,8 +61,17 @@ public class GameManager : MonoBehaviour
 
     public void IncreaseHealth(int Health)
     {
-        health += Health;
-        healthNum.text = health.ToString();
+        if (health > 7)
+        {
+            health = 10;
+            healthNum.text = health.ToString();
+        }
+        else
+        {
+            health += Health;
+            healthNum.text = health.ToString();
+        }
+    
     }
 
     public int GetHealth()

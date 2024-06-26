@@ -15622,7 +15622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4663736bb7b9aea4185d2b5cb84a14db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: 3
+  targetScene: 5
 --- !u!1001 &1319566504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24775,7 +24775,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 14.75
+  m_Intensity: 50
   m_Range: 37.78
   m_SpotAngle: 41.795353
   m_InnerSpotAngle: 29.849293
@@ -24817,7 +24817,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 14.5
+  m_BounceIntensity: 25
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}

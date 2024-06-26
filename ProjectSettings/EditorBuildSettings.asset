@@ -6,15 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: 3c0f928fb6749c74db64165578e6ba0e
+    path: Assets/Scenes/Menu 1.unity
+    guid: fcdb9ff27344eb04392f51e2b10df021
   - enabled: 1
-    path: Assets/Scenes/OutsideShipScene.unity
-    guid: ea9ef0d92a6cf104299aa5364716b774
+    path: Assets/Scenes/LoadingScn1.unity
+    guid: 84131dd7c9028214dab035ccd8c7f398
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: db64310f867744f47967db1b045da1c4
+  - enabled: 1
+    path: Assets/Scenes/LoadingScn2.unity
+    guid: 45d98ba012ada814e9cfee320cf7a197
   - enabled: 1
     path: Assets/Scenes/CaveUnderground.unity
     guid: 0485bee6a8350de44b115af17fc4d557
   - enabled: 1
-    path: Assets/Scenes/OutsideShipScene 1.unity
-    guid: 421402e0554e9eb40aac116fc549f966
+    path: Assets/Scenes/LoadingScn3.unity
+    guid: a80de16ebc8789143957229292f91303
+  - enabled: 1
+    path: Assets/Scenes/After cave.unity
+    guid: e87d8fb4ea2b43e4cbcb491aec98abb5
   m_configObjects: {}

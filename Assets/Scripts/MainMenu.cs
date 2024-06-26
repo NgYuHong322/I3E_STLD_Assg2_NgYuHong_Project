@@ -15,6 +15,12 @@ public class MainMenu : MonoBehaviour
        // change scene to game when click play
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public void Next()
+    {
+        // change scene to game when click play
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
     public void QuitGame()
     {
         // quit game 
