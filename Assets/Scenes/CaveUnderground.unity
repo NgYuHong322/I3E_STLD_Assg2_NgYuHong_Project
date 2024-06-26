@@ -12442,6 +12442,7 @@ MonoBehaviour:
     type: 3}
   bulletSpeed: 50
   gunSound: {fileID: 8300000, guid: eba5739b4f6d61e47a7ad8826bf37bf9, type: 3}
+  ammoBox: 1
 --- !u!4 &1012245104 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 476d7e24f53ccf641805646d05f61bde,

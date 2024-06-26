@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 /*
  * Author: NgYuHong
  * Date: 24/6/24
@@ -14,10 +15,20 @@ public class Door : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<Player>())
+        Player player = other.gameObject.GetComponent<Player>();
+        if (player != null)
         {
-            // Open Door
-            StartCoroutine(SlideDoor(Vector3.down * slideDistance));
+            if (!opened)
+            {
+                // Open Door
+                StartCoroutine(SlideDoor(Vector3.down * slideDistance));
+            }
+
+            // Check if the score condition is met to load the end scene
+            if (GameManager.Instance.currentScore == 3)
+            {
+                SceneManager.LoadScene("EndScnwin");
+            }
         }
     }
 
@@ -37,5 +48,5 @@ public class Door : MonoBehaviour
         transform.position = endPosition;
         opened = true;
     }
-    
+
 }

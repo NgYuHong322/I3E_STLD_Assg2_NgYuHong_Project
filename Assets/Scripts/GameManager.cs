@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 /*
  *Author: Ng Yu Hong
  * Date: 18 / 6 / 24
@@ -14,7 +16,7 @@ public class GameManager : MonoBehaviour
     public GameObject textBox;
     public TextMeshProUGUI healthNum;
     public TextMeshProUGUI MedKitNum;
-    private int currentScore = 0;
+    public int currentScore = 0;
     private int health = 10;
     public int medKit = 0;
     private void Awake()
@@ -77,5 +79,13 @@ public class GameManager : MonoBehaviour
     public int GetHealth()
     {
         return health;
+    }
+
+    private void Update()
+    {
+        if(health <= 0)
+        {
+            SceneManager.LoadScene("EndScnlose");
+        }
     }
 }
