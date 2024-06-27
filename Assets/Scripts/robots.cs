@@ -29,6 +29,7 @@ public class robots : MonoBehaviour
 
     private void Update()
     {
+        // enemy get player position and track
         enemy.SetDestination(Player.position);  
     }
 }

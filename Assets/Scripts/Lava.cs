@@ -16,6 +16,7 @@ public class Lava : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            // when gameobject tag that touch is Player, call DecreaseHealth. lavaDmg is how much dmg will be dealt
             GameManager.Instance.DecreaseHealth(lavaDmg);
             timer = 0f;
         }
@@ -27,6 +28,7 @@ public class Lava : MonoBehaviour
         {
             timer += Time.deltaTime;
 
+            // if time more than 2 sec do dmg to player
             if (timer >= DmgInt)
             {
                 GameManager.Instance.DecreaseHealth(lavaDmg);

@@ -1,7 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
+ * Author: NgYuHong
+ * Date: 26/6/24
+ * Description: Healing
+ */
 public class Healing : Collectible
 {
     [SerializeField]

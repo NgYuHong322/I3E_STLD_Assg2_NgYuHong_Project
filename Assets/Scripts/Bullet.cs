@@ -12,8 +12,10 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        // check if collision is a Robot tag
         if (collision.gameObject.CompareTag("Robot"))
         {
+            // destroy robot
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }

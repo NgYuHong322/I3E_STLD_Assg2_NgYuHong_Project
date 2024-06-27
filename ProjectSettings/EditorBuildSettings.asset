@@ -32,4 +32,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndScnlose.unity
     guid: ab184444187a9e74aaf4bdb5d5b14146
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: f190c7a4a8d3214438aa21da58d0bf0e
+  - enabled: 1
+    path: Assets/Scenes/HowToPlay.unity
+    guid: 6a95832efab7e2c41a0be349ce9b2346
+  - enabled: 1
+    path: Assets/Scenes/Option.unity
+    guid: fc8f1a69dea7de246bdb219cb211bfcb
   m_configObjects: {}

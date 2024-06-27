@@ -2,7 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UnityEditor.Progress;
-
+/*
+ * Author: NgYuHong
+ * Date: 26/6/24
+ * Description: AmmoBox
+ */
 public class AmmoBox : Collectible
 {
     [SerializeField]
@@ -12,12 +16,8 @@ public class AmmoBox : Collectible
     public override void Collected(Player player)
     {
         AudioSource.PlayClipAtPoint(collectAudio, transform.position, 1f);
-        // Find the Gun component on the player and increase the ammoBox count
-        Gun playerGun = player.GetComponentInChildren<Gun>();
-        if (playerGun != null)
-        {
-            playerGun.ammoBox += boxNum;
-        }
+        // Increase the var for ammoBox in gamemanager
+        GameManager.Instance.IncreaseAmmoBox(boxNum);
         Destroy(gameObject); // Destroy gameobject when collected
         
     }

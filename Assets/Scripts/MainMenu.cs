@@ -28,6 +28,27 @@ public class MainMenu : MonoBehaviour
         // Load different scene
         SceneManager.LoadScene("Menu 1");
     }
+    public void Option()
+    {
+        // Resume time
+        Time.timeScale = 1f;
+        // Load different scene
+        SceneManager.LoadScene("Option");
+    }
+    public void Credit()
+    {
+        // Resume time
+        Time.timeScale = 1f;
+        // Load different scene
+        SceneManager.LoadScene("Credits");
+    }
+    public void HowToPlay()
+    {
+        // Resume time
+        Time.timeScale = 1f;
+        // Load different scene
+        SceneManager.LoadScene("HowToPlay");
+    }
     public void QuitGame()
     {
         // quit game 

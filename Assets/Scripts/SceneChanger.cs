@@ -15,13 +15,14 @@ public class SceneChanger : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            
+            // if gameObject that touch trigger is tag Player run code   
             ChangeScene();
         }
     }
 
     void ChangeScene()
-    {
+    {   
+        // function to change scn to targetscene changable in unity
         SceneManager.LoadScene(targetScene);
     }
 }
