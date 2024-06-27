@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public GameObject textBox;
     public TextMeshProUGUI healthNum;
     public TextMeshProUGUI MedKitNum;
+    private bool gameOver = false;
     public int currentScore = 0;
     private int health = 10;
     public int medKit = 0;
@@ -90,8 +91,9 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if(health <= 0)
+        if(health <= 0 && !gameOver)
         {
+            gameOver = true;
             //when health <= 0 load lose scn
             SceneManager.LoadScene("EndScnlose");
         }
