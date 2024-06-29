@@ -98,4 +98,34 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("EndScnlose");
         }
     }
+
+    public void RestartGame()
+    {
+        // Reset game variables
+        gameOver = false;
+        currentScore = 0;
+        health = 10;
+        medKit = 0;
+        ammoBox = 0;
+
+        // Update UI elements
+        if (scoreText != null)
+        {
+            scoreText.text = currentScore.ToString();
+        }
+        if (healthNum != null)
+        {
+            healthNum.text = health.ToString();
+        }
+        if (MedKitNum != null)
+        {
+            MedKitNum.text = medKit.ToString();
+        }
+
+        // Resume time
+        Time.timeScale = 1f;
+
+        // Load the start scene
+        SceneManager.LoadScene("Start");
+    }
 }

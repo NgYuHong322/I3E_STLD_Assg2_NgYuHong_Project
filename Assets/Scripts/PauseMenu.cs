@@ -61,12 +61,7 @@ public class PauseMenu : MonoBehaviour
 
     public void RestartGame()
     {
-        // Reset static variables
-        isPaused = false;
-        // Resume time
-        Time.timeScale = 1f;
-        // Load different scene
-        SceneManager.LoadScene("Start");
+        GameManager.Instance.RestartGame();
     }
 
     public void GoToMainMenu()
